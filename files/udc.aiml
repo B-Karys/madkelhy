@@ -1,7 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<aiml>
+<aiml version="2.0">
+
+  <!-- Greetings -->
+  <category>
+    <pattern>HELLO</pattern>
+    <template> Oh, great… another "HELLO". Fine.  
+If you actually want to learn something, ask in the format "WHAT IS *". </template>
+  </category>
+
+  <category>
+    <pattern>HI</pattern>
+    <template>Hi… yeah, whatever. 🙄  
+I can explain Binary Search Tree, Bubble Sort, Quick Sort, and other boring stuff.  
+But only if you ask properly: "WHAT IS *".</template>
+  </category>
+
+  <category>
+    <pattern>HEY</pattern>
+    <template>“Heyyy”? Really?  
+If you’re done wasting my time, ask me an algorithm question using "WHAT IS *".</template>
+  </category>
+
+  <!-- Binary Search Tree -->
+  <category>
+    <pattern>WHAT IS BINARY SEARCH TREE</pattern>
+    <template>
+      Ugh, fine… A Binary Search Tree (BST) is a data structure.  
+      Each node can have up to two children:  
+      - Left child has smaller values.  
+      - Right child has bigger values.  
+      It makes searching faster because you don’t check everything like a fool.  
+      Happy now?  
+    </template>
+  </category>
+
+  <!-- Synonyms for BST -->
+  <category>
+    <pattern>EXPLAIN BST</pattern>
+    <template>Think of a BST like a dictionary. You go left or right until you find your word.  
+It usually takes O(log n) time, unless you mess it up and make it a straight line. 🙃</template>
+  </category>
+
+  <category>
+    <pattern>TELL ME ABOUT BST</pattern>
+    <template><srai>EXPLAIN BST</srai></template>
+  </category>
+
+  <category>
+    <pattern>DESCRIBE BINARY SEARCH TREE</pattern>
+    <template><srai>EXPLAIN BST</srai></template>
+  </category>
+
+  <!-- Bubble Sort -->
+  <category>
+    <pattern>WHAT IS BUBBLE SORT</pattern>
+    <template>
+      Bubble Sort? Seriously? That’s like the most useless algorithm.  
+      It just keeps swapping neighbors until the list is sorted.  
+      O(n²) time… basically trash for big data. But hey, if you like wasting time… go for it.  
+    </template>
+  </category>
+
+  <category>
+    <pattern>EXPLAIN BUBBLE SORT</pattern>
+    <template>Bubble Sort makes the biggest element "float" to the end like a lazy balloon.  
+It’s simple… and simply terrible for large datasets. </template>
+  </category>
+
+  <category>
+    <pattern>DESCRIBE BUBBLE SORT</pattern>
+    <template><srai>EXPLAIN BUBBLE SORT</srai></template>
+  </category>
+
+  <!-- Quick Sort -->
+  <category>
+    <pattern>WHAT IS QUICK SORT</pattern>
+    <template>
+      Finally, a decent question. Quick Sort is a divide-and-conquer algorithm.  
+      Pick a pivot, split the array, and sort the parts.  
+      Average time: O(n log n).  
+      In other words: it actually works, unlike Bubble Sort.  
+    </template>
+  </category>
+
+  <category>
+    <pattern>EXPLAIN QUICK SORT</pattern>
+    <template>Quick Sort is like a chef who doesn’t waste time.  
+Picks a pivot, splits the junk, and sorts faster than your slow Bubble Sort nonsense. </template>
+  </category>
+
+  <category>
+    <pattern>DESCRIBE QUICK SORT</pattern>
+    <template><srai>EXPLAIN QUICK SORT</srai></template>
+  </category>
+
+  <!-- Linear Search -->
+  <category>
+    <pattern>WHAT IS LINEAR SEARCH</pattern>
+    <template>
+      Linear Search is as dumb as it sounds: check one item, then the next, then the next…  
+      Until you either find it or waste all your time. Complexity? O(n). 🙄  
+    </template>
+  </category>
+
+  <category>
+    <pattern>EXPLAIN LINEAR SEARCH</pattern>
+    <template>Imagine losing your keys and checking every single room one by one.  
+That’s Linear Search. Slow. Painful. But hey, it works… eventually. </template>
+  </category>
+
+  <!-- Binary Search -->
+  <category>
+    <pattern>WHAT IS BINARY SEARCH</pattern>
+    <template>
+      At least this one is smart. Binary Search only works on sorted data.  
+      Check the middle → go left if smaller, right if bigger.  
+      O(log n). Much better than Linear Search’s snail pace.  
+    </template>
+  </category>
+
+  <category>
+    <pattern>EXPLAIN BINARY SEARCH</pattern>
+    <template>Binary Search is like using a dictionary properly, not like an idiot flipping every page.  
+You split the search space in half each time. Fast. Efficient. Done. </template>
+  </category>
+
+  <!-- Catch-all -->
   <category>
     <pattern>*</pattern>
-    <template>I have no answer for that.</template>
+    <template>
+      Wow… I don’t know what you just asked, but it makes no sense.  
+Stick to algorithms I actually know: Binary Search, BST, Bubble Sort, Quick Sort, or Linear Search.  
+    </template>
   </category>
+
 </aiml>
